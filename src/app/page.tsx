@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import backShapes from '@/public/backShapes.png'
+import { Intro } from '@/components/Intro'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         alt='back shapes'
         draggable={false}
       />
+      <Intro />
     </main>
   )
 }
