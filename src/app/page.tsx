@@ -2,6 +2,7 @@ import Image from 'next/image'
 
 import backShapes from '@/public/backShapes.png'
 import { Intro } from '@/components/Intro'
+import { AboutMe } from '@/components/AboutMe'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         draggable={false}
       />
       <Intro />
+      <AboutMe />
     </main>
   )
 }
