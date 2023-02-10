@@ -3,6 +3,7 @@ import Image from 'next/image'
 import NextLink from 'next/link'
 
 import { CopyText } from '@/components/CopyText'
+import { Heading } from '@/components/Heading'
 import { Link } from '@/components/Link'
 import aboutMe from '@/public/aboutMe.png'
 
@@ -13,10 +14,7 @@ export function AboutMe() {
         <Image src={aboutMe} alt='' draggable={false} />
       </div>
       <div className='flex flex-1 flex-col gap-6'>
-        <h2 className='font-heading text-3xl leading-tight font-semibold'>
-          <span className='gradient-heading dark:gradient-heading-dark'>About </span>
-          <span className='text-black dark:text-white'>Me</span>
-        </h2>
+        <Heading highlight='About' text='Me' />
         <CopyText>
           Software Engineer with 4 years of experience in building and maintaining web applications.
           Experience with responsive design, cross-browser compatibility, and SEO. Skilled in
