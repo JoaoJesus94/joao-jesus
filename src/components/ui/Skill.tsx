@@ -18,12 +18,12 @@ const SKILL_ICON_MAPPER = {
   typescript: SiTypescript,
 }
 
-interface ISkill {
-  skill: TSkill
+type SkillProps = {
+  skill: keyof typeof SKILL_ICON_MAPPER
 }
 
-export function Skill({ skill }: ISkill) {
-  const Icon = SKILL_ICON_MAPPER[skill.toLowerCase() as Lowercase<ISkill['skill']>]
+export function Skill({ skill }: SkillProps) {
+  const Icon = SKILL_ICON_MAPPER[skill.toLowerCase() as SkillProps['skill']]
 
   return (
     <div className='flex flex-col justify-center items-center gap-4'>

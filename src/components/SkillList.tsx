@@ -1,15 +1,15 @@
-import { Heading } from '@/components/Heading'
-import { Skill } from '@/components/Skill'
+import { Heading } from '@/components/ui/Heading'
+import { Skill } from '@/components/ui/Skill'
 
-export const skills = ['React', 'Redux', 'TypeScript', 'JavaScript', 'HTML', 'CSS'] as const
+const skills = ['React', 'Redux', 'TypeScript', 'JavaScript', 'HTML', 'CSS'] as const
 
 export function SkillList() {
   return (
     <section className='md:text-center'>
-      <Heading highlight='Skills' text="I've acquired" />
-      <div className='grid  grid-cols-[repeat(auto-fit,90px)] justify-between gap-y-8 gap-6 pt-8'>
+      <Heading highlight='Technologies' text="I've been working with" />
+      <div className='grid  grid-cols-[repeat(auto-fit,90px)] justify-between gap-y-8 gap-x-4 pt-10'>
         {skills.map(skill => (
-          <Skill key={skill} skill={skill} />
+          <Skill key={skill} skill={skill as Lowercase<typeof skills[number]>} />
         ))}
       </div>
     </section>

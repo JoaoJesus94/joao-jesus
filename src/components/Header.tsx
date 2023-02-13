@@ -1,6 +1,5 @@
-import { Link } from '@/components/Link'
-
-import { ThemeToggle } from '@/components/ThemeToggle'
+import { Link } from '@/components/ui/Link'
+import { ThemeToggle } from '@/components/ui/ThemeToggle'
 
 export function Header() {
   return (

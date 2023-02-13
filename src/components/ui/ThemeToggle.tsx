@@ -1,10 +1,10 @@
 'use client'
 
+import { FaMoon, FaSun } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import { useContext } from 'react'
-import { FaMoon, FaSun } from 'react-icons/fa'
 
-import { ThemeContext } from '@/components/ThemeContextProvider'
+import { ThemeContext } from '@/context/ThemeContextProvider'
 
 export function ThemeToggle() {
   const { theme, toggleTheme } = useContext(ThemeContext)

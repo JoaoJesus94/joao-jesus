@@ -1,9 +1,9 @@
-interface IHeading {
+interface HeadingProps {
   highlight?: string
   text?: string
 }
 
-export function Heading({ highlight, text }: IHeading) {
+export function Heading({ highlight, text }: HeadingProps) {
   return (
     <h2 className='font-heading text-3xl leading-tight font-semibold'>
       {highlight && (

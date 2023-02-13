@@ -3,7 +3,7 @@ import '@/styles/globals.css'
 import { cookies } from 'next/headers'
 
 import { Header } from '@/components/Header'
-import { ThemeContextProvider } from '@/components/ThemeContextProvider'
+import { ThemeContextProvider } from '@/context/ThemeContextProvider'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const themeFromCookies = cookies().get('theme')?.value as IThemeContext['theme']

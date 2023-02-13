@@ -1,10 +1,9 @@
 import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa'
 import Image from 'next/image'
-import NextLink from 'next/link'
 
-import { CopyText } from '@/components/CopyText'
-import { Heading } from '@/components/Heading'
-import { Link } from '@/components/Link'
+import { CopyText } from '@/components/ui/CopyText'
+import { Heading } from '@/components/ui/Heading'
+import { Link } from '@/components/ui/Link'
 import aboutMe from '@/public/aboutMe.png'
 
 export function AboutMe() {
@@ -24,15 +23,19 @@ export function AboutMe() {
           Passion for staying up to date with the latest web technologies and industry trends.
         </CopyText>
         <div className='flex gap-7'>
-          <NextLink href='https://github.com/JoaoJesus94' target='_blank'>
+          <Link href='https://github.com/JoaoJesus94' target='_blank' rel='noopener noreferrer'>
             <FaGithub size={32} />
-          </NextLink>
-          <NextLink href='https://www.linkedin.com/in/joaojesus94' target='_blank'>
+          </Link>
+          <Link
+            href='https://www.linkedin.com/in/joaojesus94'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <FaLinkedin size={32} />
-          </NextLink>
-          <NextLink href='https://twitter.com/JoaoJesus_94' target='_blank'>
+          </Link>
+          <Link href='https://twitter.com/JoaoJesus_94' target='_blank' rel='noopener noreferrer'>
             <FaTwitter size={32} />
-          </NextLink>
+          </Link>
         </div>
         <Link href='#' variant='button'>
           Contact me

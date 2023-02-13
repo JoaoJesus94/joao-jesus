@@ -7,15 +7,15 @@ const ThemeContext = createContext<IThemeContext>({
   toggleTheme: undefined,
 })
 
-function ThemeContextProvider({ themeFromCookies = 'light', children }: IThemeContextProvider) {
+function ThemeContextProvider({ themeFromCookies = 'light', children }: ThemeContextProviderProps) {
   const [currentTheme, setCurrentTheme] = useState<IThemeContext['theme']>(themeFromCookies)
 
   const toggleThemeHandler = () => {
-    setCurrentTheme(prev => {
-      const nextTheme = prev === 'light' ? 'dark' : 'light'
-      document.documentElement.setAttribute('class', nextTheme!)
-      document.cookie = `theme=${nextTheme};`
-      return nextTheme
+    setCurrentTheme(prevTheme => {
+      const newTheme = prevTheme === 'light' ? 'dark' : 'light'
+      document.documentElement.setAttribute('class', newTheme!)
+      document.cookie = `theme=${newTheme};`
+      return newTheme
     })
   }
 

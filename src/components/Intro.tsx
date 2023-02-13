@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
-import { CopyText } from '@/components/CopyText'
-import { Tile } from '@/components/Tile'
+import { CopyText } from '@/components/ui/CopyText'
+import { Tile } from '@/components/ui/Tile'
 import laptopIcon from '@/public/laptopIcon.svg'
 import portugalFlagIcon from '@/public/portugalFlag.svg'
 import computer from '@/public/computer.png'

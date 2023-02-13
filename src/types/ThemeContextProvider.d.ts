@@ -3,7 +3,7 @@ interface IThemeContext {
   toggleTheme?: () => void
 }
 
-interface IThemeContextProvider {
+interface ThemeContextProviderProps {
   themeFromCookies?: IThemeContext['theme']
   children: ReactNode
 }
