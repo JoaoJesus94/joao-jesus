@@ -6,8 +6,8 @@ const skills = ['React', 'Redux', 'TypeScript', 'JavaScript', 'HTML', 'CSS'] as 
 export function SkillList() {
   return (
     <section className='md:text-center'>
-      <Heading highlight='Technologies' text="I've been working with" />
-      <div className='grid  grid-cols-[repeat(auto-fit,90px)] justify-between gap-y-8 gap-x-4 pt-10'>
+      <Heading className='pb-10' highlight='Technologies' text="I've been working with" />
+      <div className='grid  grid-cols-[repeat(auto-fit,90px)] justify-between gap-y-8 gap-x-4'>
         {skills.map(skill => (
           <Skill key={skill} skill={skill as Lowercase<typeof skills[number]>} />
         ))}

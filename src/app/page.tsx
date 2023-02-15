@@ -1,9 +1,10 @@
 import Image from 'next/image'
 
-import backShapes from '@/public/backShapes.png'
-import { Intro } from '@/components/Intro'
 import { AboutMe } from '@/components/AboutMe'
+import { Intro } from '@/components/Intro'
+import { Projects } from '@/components/Projects'
 import { SkillList } from '@/components/SkillList'
+import backShapes from '@/public/backShapes.png'
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Intro />
       <AboutMe />
       <SkillList />
+      <Projects />
     </main>
   )
 }
