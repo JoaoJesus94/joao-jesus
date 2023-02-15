@@ -13,14 +13,13 @@ export function Intro() {
         <div>
           <span className='font-body text-2xl'>Hello! I&apos;m João Jesus</span>
           <h1 className='font-heading text-4xl leading-tight font-semibold gradient-heading dark:gradient-heading-dark'>
-            Software Engineer
+            Frontend Developer
           </h1>
         </div>
         <CopyText>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nihil praesentium ex illum
-          veniam magni amet animi voluptatum. Magnam reprehenderit magni vitae. Autem tempore itaque
-          a velit, et perferendis excepturi! Lorem ipsum dolor sit amet consectetur adipisicing
-          elit.
+          While frontend development is my primary interest, I&apos;m also keen to explore the
+          backend using Node.js. As a JavaScript enthusiast, I&apos;m always on the lookout for new
+          opportunities to refine and expand my skill set.
         </CopyText>
       </div>
       <div className='flex-1 relative min-w-[270px] sm:min-w-[340px] max-w-[420px]'>

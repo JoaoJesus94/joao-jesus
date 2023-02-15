@@ -20,12 +20,12 @@ export function AboutMe() {
       <div className='flex flex-1 flex-col gap-6'>
         <Heading highlight='About' text='Me' />
         <CopyText>
-          Software Engineer with 4 years of experience in building and maintaining web applications.
-          Experience with responsive design, cross-browser compatibility, and SEO. Skilled in
-          debugging and performance optimization. Strong understanding of web accessibility.
-          Experience working in agile development environments. Strong problem-solving and
-          communication skills. Ability to collaborate with cross-functional teams and stakeholders.
-          Passion for staying up to date with the latest web technologies and industry trends.
+          Frontend developer with 4+ years of experience in building and maintaining web
+          applications. Experience with responsive design, cross-browser compatibility, and SEO.
+          Skilled in debugging and performance optimization. Strong understanding of web
+          accessibility. Experience working in agile development environments. Strong
+          problem-solving and communication skills. Ability to collaborate with cross-functional
+          teams and stakeholders.
         </CopyText>
         <div className='flex gap-7'>
           <Link href='https://github.com/JoaoJesus94' target='_blank' rel='noopener noreferrer'>
