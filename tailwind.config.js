@@ -7,6 +7,16 @@ module.exports = {
   content: ['./src/app/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      keyframes: {
+        'slow-bounce': {
+          '0%': { transform: 'translateY(-5%)' },
+          '50%': { transform: 'translateY(5%)' },
+          '100%': { transform: 'translateY(-5%)' },
+        },
+      },
+      animation: {
+        'slow-bounce': 'slow-bounce 4s ease-in-out infinite',
+      },
       screens: { xs: '425px' },
       colors: {
         background: '#0B1238',

@@ -4,7 +4,6 @@ import { CopyText } from '@/components/ui/CopyText'
 import { Tile } from '@/components/ui/Tile'
 import laptopIcon from '@/public/laptopIcon.svg'
 import portugalFlagIcon from '@/public/portugalFlag.svg'
-import computer from '@/public/computer.png'
 import reactIcon from '@/public/react.svg'
 
 export function Intro() {
@@ -25,7 +24,14 @@ export function Intro() {
         </CopyText>
       </div>
       <div className='flex-1 relative min-w-[270px] sm:min-w-[340px] max-w-[420px]'>
-        <Image src={computer} alt='' draggable={false} />
+        <Image
+          className='animate-slow-bounce'
+          src='https://res.cloudinary.com/joaojesus/image/upload/v1676419495/JoaoJesus.dev/computer.png'
+          alt='introduction image'
+          width={420}
+          height={420}
+          draggable={false}
+        />
         <div className='absolute top-6 xs:top-20 right-0 left-0 flex flex-col gap-8 text-white'>
           <Tile iconSrc={laptopIcon} alt='Laptop icon'>
             Working at xgeeks
