@@ -5,6 +5,7 @@ import { Tile } from '@/components/ui/Tile'
 import laptopIcon from '@/public/laptopIcon.svg'
 import portugalFlagIcon from '@/public/portugalFlag.svg'
 import reactIcon from '@/public/react.svg'
+import { Link } from '@/components/ui/Link'
 
 export function Intro() {
   return (
@@ -33,7 +34,15 @@ export function Intro() {
         />
         <div className='absolute top-6 xs:top-20 right-0 left-0 flex flex-col gap-8 text-white'>
           <Tile iconSrc={laptopIcon} alt='Laptop icon'>
-            Working at xgeeks
+            Working at{' '}
+            <Link
+              className='text-[#43CBFF] hover:underline'
+              href='https://www.xgeeks.io'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              xgeeks
+            </Link>
           </Tile>
           <Tile className='self-end' iconSrc={portugalFlagIcon} alt='Portugal flag icon'>
             Based in Portugal

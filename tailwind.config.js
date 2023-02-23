@@ -33,7 +33,6 @@ module.exports = {
   plugins: [
     plugin(function ({ addUtilities }) {
       addUtilities({
-        '.bg-patch': { position: 'absolute', 'z-index': -100 },
         '.gradient-heading': {
           color: 'transparent',
           backgroundClip: 'text',

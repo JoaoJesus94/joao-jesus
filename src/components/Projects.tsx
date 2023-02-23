@@ -9,31 +9,11 @@ const projectsData = [
   {
     demo: 'https://joaojesus.dev',
     description:
-      'text not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+      'This is the project my personal website. Its purpose is to demonstrate my expertise as a frontend developer, highlight my portfolio of completed projects, and showcase my skills.',
     github: 'https://github.com/JoaoJesus94/joao-jesus',
     imgUrl:
       'https://res.cloudinary.com/joaojesus/image/upload/v1677024738/JoaoJesus.dev/joaojesus.dev.png',
     name: 'joaojesus.dev',
-    stack: ['React', 'NextJS', 'TypeScript', 'Tailwindcss'],
-  },
-  {
-    demo: 'https://joaojesus.dev',
-    description:
-      'text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-    github: 'https://github.com/JoaoJesus94/joao-jesus',
-    imgUrl:
-      'https://res.cloudinary.com/joaojesus/image/upload/v1677024738/JoaoJesus.dev/joaojesus.dev.png',
-    name: 'sd.dev',
-    stack: ['React', 'NextJS', 'TypeScript', 'Tailwindcss'],
-  },
-  {
-    demo: 'https://joaojesus.dev',
-    description:
-      'text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-    github: 'https://github.com/JoaoJesus94/joao-jesus',
-    imgUrl:
-      'https://res.cloudinary.com/joaojesus/image/upload/v1677024738/JoaoJesus.dev/joaojesus.dev.png',
-    name: 'ass.dev',
     stack: ['React', 'NextJS', 'TypeScript', 'Tailwindcss'],
   },
 ]
@@ -41,17 +21,14 @@ const projectsData = [
 export function Projects() {
   return (
     <section id='projects' className='md:text-center'>
-      <Heading className='pb-10' highlight='Projects' text="I've worked on" />
-      <div className='flex flex-col gap-20'>
+      <Heading highlight='Projects' text="I've worked on" />
+      <div className='flex flex-col gap-20 mt-16'>
         {projectsData.map(({ name, description, imgUrl, stack, github, demo }, index) => {
           const isOdd = !!(index % 2)
           return (
             <div
               key={name}
-              className={cx(
-                'flex flex-col gap-6 opacity-50 hover:opacity-90 transition-opacity ease-in',
-                isOdd ? 'md:flex-row-reverse' : 'md:flex-row'
-              )}
+              className={cx('flex flex-col gap-6', isOdd ? 'md:flex-row-reverse' : 'md:flex-row')}
             >
               <Image
                 className='rounded-lg self-center max-w-md max-h-[252px] w-full h-full object-cover border border-[#d067ff2b]'
@@ -68,7 +45,7 @@ export function Projects() {
                     </span>
                     <h3 className='text-xl font-semibold'>{name}</h3>
                   </div>
-                  <div className='flex gap-2'>
+                  <div className='flex gap-4'>
                     <Link href={github} target='_blank' rel='noopener noreferrer'>
                       <FiGithub size={24} />
                     </Link>

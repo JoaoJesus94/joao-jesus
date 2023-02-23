@@ -7,9 +7,9 @@ import { SkillList } from '@/components/SkillList'
 
 export default function Home() {
   return (
-    <main className='flex flex-col gap-24 md:gap-32 pb-40'>
+    <main className='flex flex-col gap-24 md:gap-40 pb-40'>
       <Image
-        className='bg-patch top-0 left-0'
+        className='absolute top-0 left-0 -z-10'
         src='https://res.cloudinary.com/joaojesus/image/upload/v1676419495/JoaoJesus.dev/backShapes.png'
         alt='back shapes'
         width={450}
