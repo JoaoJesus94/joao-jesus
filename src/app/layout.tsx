@@ -2,6 +2,7 @@ import '@/styles/globals.css'
 
 import { cookies } from 'next/headers'
 
+import { AnalyticsWrapper } from '@/components/Analytics'
 import { Header } from '@/components/Header'
 import { Maintenance } from '@/components/Maintenance'
 import { ThemeContextProvider } from '@/context/ThemeContextProvider'
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </body>
           </>
         )}
+        <AnalyticsWrapper />
       </html>
     </ThemeContextProvider>
   )
