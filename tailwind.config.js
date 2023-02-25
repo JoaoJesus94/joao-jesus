@@ -25,8 +25,8 @@ module.exports = {
         'skill-dark': '#bd8af984',
       },
       fontFamily: {
-        heading: ['Poppins', ...defaultTheme.fontFamily.sans],
-        body: ['DM Sans', ...defaultTheme.fontFamily.sans],
+        heading: ['var(--font-poppins)', ...defaultTheme.fontFamily.sans],
+        body: ['var(--font-dm-sans)', ...defaultTheme.fontFamily.sans],
       },
     },
   },
