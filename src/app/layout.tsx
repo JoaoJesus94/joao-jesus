@@ -17,12 +17,14 @@ export const metadata: Metadata = {
 }
 
 const poppins = Poppins({
+  subsets: ['latin'],
   variable: '--font-poppins',
   weight: ['400', '500', '600'],
   display: 'swap',
 })
 
 const dmSans = DM_Sans({
+  subsets: ['latin'],
   variable: '--font-dm-sans',
   weight: ['400'],
   display: 'swap',
