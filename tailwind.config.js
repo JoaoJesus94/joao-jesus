@@ -1,5 +1,5 @@
 const plugin = require('tailwindcss/plugin')
-const defaultTheme = require('tailwindcss/defaultTheme')
+const { fontFamily } = require('tailwindcss/defaultTheme')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -25,8 +25,8 @@ module.exports = {
         'skill-dark': '#bd8af984',
       },
       fontFamily: {
-        heading: ['var(--font-poppins)', ...defaultTheme.fontFamily.sans],
-        body: ['var(--font-dm-sans)', ...defaultTheme.fontFamily.sans],
+        heading: ['var(--font-poppins)', ...fontFamily.sans],
+        body: ['var(--font-dm-sans)', ...fontFamily.sans],
       },
     },
   },

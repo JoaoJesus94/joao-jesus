@@ -6,7 +6,7 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
-    domains: ['placekitten.com', 'res.cloudinary.com'],
+    domains: ['res.cloudinary.com'],
   },
   typescript: {
     ignoreBuildErrors: true,

@@ -34,7 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <ThemeContextProvider themeFromCookies={themeFromCookies}>
-      <html lang='en' className={cx(themeFromCookies, `${poppins.variable} ${dmSans.variable}`)}>
+      <html lang='en' className={cx(themeFromCookies, dmSans.variable, poppins.variable)}>
         <head />
         {isMaintenanceMode ? (
           <Maintenance />
