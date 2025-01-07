@@ -1,7 +1,7 @@
 'use client'
 
 import { FaMoon, FaSun } from 'react-icons/fa'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 import { useContext } from 'react'
 
 import { ThemeContext } from '@/context/ThemeContextProvider'

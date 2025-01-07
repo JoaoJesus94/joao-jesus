@@ -2,7 +2,7 @@
 
 import { AnchorHTMLAttributes, RefAttributes } from 'react'
 import { cva, cx, VariantProps } from 'class-variance-authority'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 import NextLink, { LinkProps as NextLinkProps } from 'next/link'
 
 const linkCva = cva('font-heading font-medium rounded-sm', {
