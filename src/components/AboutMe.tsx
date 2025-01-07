@@ -1,4 +1,4 @@
-import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa'
+import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import Image from 'next/image'
 
 import { CopyText } from '@/components/ui/CopyText'
@@ -20,12 +20,11 @@ export function AboutMe() {
       <div className='flex flex-1 flex-col gap-6'>
         <Heading highlight='About' text='Me' />
         <CopyText>
-          Frontend developer with 4+ years of experience in building and maintaining web
-          applications. Experience with responsive design, cross-browser compatibility, and SEO.
-          Skilled in debugging and performance optimization. Strong understanding of web
-          accessibility. Experience working in agile development environments. Strong
-          problem-solving and communication skills. Ability to collaborate with cross-functional
-          teams and stakeholders.
+          Frontend Engineer with over 5 years of experience in developing high-performance
+          applications using Typescript and React. Expertise in performance optimization and
+          building responsive UIs. A strong advocate for writing clean, maintainable code and
+          delivering seamless user experiences. Effective communicator who thrives in
+          cross-functional teams, bringing a passion for continuous growth and learning.
         </CopyText>
         <div className='flex gap-7'>
           <Link href='https://github.com/JoaoJesus94' target='_blank' rel='noopener noreferrer'>
@@ -38,13 +37,10 @@ export function AboutMe() {
           >
             <FaLinkedin size={32} />
           </Link>
-          <Link href='https://twitter.com/JoaoJesus_94' target='_blank' rel='noopener noreferrer'>
-            <FaTwitter size={32} />
-          </Link>
         </div>
-        <Link href='#' variant='button'>
+        {/* <Link href='#' variant='button'>
           Contact me
-        </Link>
+        </Link> */}
       </div>
     </section>
   )

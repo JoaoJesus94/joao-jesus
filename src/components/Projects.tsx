@@ -7,9 +7,9 @@ import { cx } from 'class-variance-authority'
 
 const projectsData = [
   {
-    demo: 'https://joaojesus.dev',
+    link: 'https://joaojesus.dev',
     description:
-      'This is the project my personal website. Its purpose is to demonstrate my expertise as a frontend developer, highlight my portfolio of completed projects, and showcase my skills.',
+      'This is the project my personal website. Its purpose is to demonstrate my expertise as a frontend engineer, highlight my portfolio of completed projects, and showcase my skills.',
     github: 'https://github.com/JoaoJesus94/joao-jesus',
     imgUrl:
       'https://res.cloudinary.com/joaojesus/image/upload/v1677024738/JoaoJesus.dev/joaojesus.dev.png',
@@ -23,7 +23,7 @@ export function Projects() {
     <section id='projects' className='md:text-center'>
       <Heading highlight='Projects' text="I've worked on" />
       <div className='flex flex-col gap-20 mt-16'>
-        {projectsData.map(({ name, description, imgUrl, stack, github, demo }, index) => {
+        {projectsData.map(({ name, description, imgUrl, stack, github, link }, index) => {
           const isOdd = !!(index % 2)
           return (
             <div
@@ -49,22 +49,21 @@ export function Projects() {
                     <Link href={github} target='_blank' rel='noopener noreferrer'>
                       <FiGithub size={24} />
                     </Link>
-                    <Link href={demo} target='_blank' rel='noopener noreferrer'>
+                    <Link href={link} target='_blank' rel='noopener noreferrer'>
                       <FiExternalLink size={24} />
                     </Link>
                   </div>
                 </div>
-                <p className='p-4 bg-[#d067ff2b] backdrop-blur-2xl rounded-sm text-sm'>
-                  {description}
-                </p>
+                <p className='p-4 bg-[#cf67ff2b] rounded-sm text-sm'>{description}</p>
                 <div className='flex flex-col font-heading'>
                   <span className='font-medium gradient-heading dark:gradient-heading-dark'>
                     Tools and Languages
                   </span>
-                  <div className='flex flex-row gap-x-6 items-center flex-wrap'>
-                    {stack.map(tech => (
+                  <div>
+                    {stack.map((tech, index) => (
                       <span key={tech} className='font-medium'>
                         {tech}
+                        {index < stack.length - 1 && <span className='text-sm mx-3'>|</span>}
                       </span>
                     ))}
                   </div>

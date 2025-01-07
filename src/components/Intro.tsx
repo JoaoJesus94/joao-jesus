@@ -14,7 +14,7 @@ export function Intro() {
         <div>
           <span className='font-body text-2xl'>Hello! I&apos;m João Jesus</span>
           <h1 className='font-heading text-4xl leading-tight font-semibold gradient-heading dark:gradient-heading-dark'>
-            Frontend Developer
+            Frontend Engineer
           </h1>
         </div>
         <CopyText>
@@ -36,12 +36,12 @@ export function Intro() {
           <Tile iconSrc={laptopIcon} alt='Laptop icon'>
             Working at{' '}
             <Link
-              className='text-[#43CBFF] hover:underline'
-              href='https://www.xgeeks.io'
+              className='text-blue-400 hover:underline'
+              href='https://www.yld.io'
               target='_blank'
               rel='noopener noreferrer'
             >
-              xgeeks
+              YLD
             </Link>
           </Tile>
           <Tile className='self-end' iconSrc={portugalFlagIcon} alt='Portugal flag icon'>
