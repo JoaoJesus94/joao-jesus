@@ -12,9 +12,9 @@ import { Maintenance } from '@/components/Maintenance'
 import { ThemeContextProvider } from '@/context/ThemeContextProvider'
 
 export const metadata: Metadata = {
-  title: 'João Jesus | Frontend Developer',
+  title: 'João Jesus | Frontend Engineer',
   description:
-    'Frontend developer with experience in building and maintaining web applications. Based in Portugal. Specializing in React.',
+    'Frontend engineer with experience in building and maintaining web applications. Based in Portugal. Specializing in React.',
 }
 
 const poppins = Poppins({
