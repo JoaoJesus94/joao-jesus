@@ -4,8 +4,9 @@ import { cookies } from 'next/headers'
 import { cx } from 'class-variance-authority'
 import { Poppins, DM_Sans } from 'next/font/google'
 import type { Metadata } from 'next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Analytics } from '@vercel/analytics/next'
 
-import { AnalyticsWrapper } from '@/components/Analytics'
 import { Header } from '@/components/Header'
 import { Maintenance } from '@/components/Maintenance'
 import { ThemeContextProvider } from '@/context/ThemeContextProvider'
@@ -30,8 +31,9 @@ const dmSans = DM_Sans({
   display: 'swap',
 })
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const themeFromCookies = cookies().get('theme')?.value as IThemeContext['theme']
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const cookieStore = await cookies()
+  const themeFromCookies = cookieStore.get('theme')?.value as IThemeContext['theme']
   const isMaintenanceMode = process.env.MAINTENANCE_MODE === '1'
 
   return (
@@ -45,10 +47,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <body className='bg-white dark:bg-background text-black dark:text-white font-body pt-6 px-6 max-w-screen-lg m-auto transition-colors duration-300'>
               <Header />
               {children}
+              <Analytics />
+              <SpeedInsights />
             </body>
           </>
         )}
-        <AnalyticsWrapper />
       </html>
     </ThemeContextProvider>
   )

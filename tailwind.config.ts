@@ -1,10 +1,14 @@
-const plugin = require('tailwindcss/plugin')
-const { fontFamily } = require('tailwindcss/defaultTheme')
+import type { Config } from 'tailwindcss'
+import plugin from 'tailwindcss/plugin'
+import { fontFamily } from 'tailwindcss/defaultTheme'
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   darkMode: 'class',
-  content: ['./src/app/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
   theme: {
     extend: {
       keyframes: {
@@ -52,4 +56,4 @@ module.exports = {
       })
     }),
   ],
-}
+} satisfies Config
