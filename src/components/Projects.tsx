@@ -1,29 +1,58 @@
-import { Heading } from '@/components/ui/Heading'
-import { FiGithub, FiExternalLink } from 'react-icons/fi'
-
-import Image from 'next/image'
-import { Link } from '@/components/ui/Link'
 import { cx } from 'class-variance-authority'
+import Image from 'next/image'
+import { FiExternalLink, FiGithub } from 'react-icons/fi'
 
-const projectsData = [
+import { Heading } from '@/components/ui/Heading'
+import { Link } from '@/components/ui/Link'
+
+type Project = {
+  link: string
+  description: string
+  github?: string
+  imgUrl: string
+  imgAlt: string
+  name: string
+  stack: string[]
+}
+
+const projectsData: Project[] = [
   {
     link: 'https://joaojesus.dev',
     description:
-      'This is the project my personal website. Its purpose is to demonstrate my expertise as a frontend engineer, highlight my portfolio of completed projects, and showcase my skills.',
+      'This is my personal website. It features a responsive design, SEO optimization, and a clean layout showcasing my skills and projects. The site highlights my expertise in creating performance-driven, user-friendly websites tailored to deliver an optimal experience across devices.',
     github: 'https://github.com/JoaoJesus94/joao-jesus',
     imgUrl:
       'https://res.cloudinary.com/joaojesus/image/upload/v1677024738/JoaoJesus.dev/joaojesus.dev.png',
+    imgAlt: 'Personal website',
     name: 'joaojesus.dev',
-    stack: ['React', 'NextJS', 'TypeScript', 'Tailwindcss'],
+    stack: ['React', 'NextJS', 'TypeScript', 'TailwindCss'],
+  },
+  {
+    link: 'https://chemondis.com',
+    description:
+      'CheMondis is a leading B2B marketplace for the chemical industry, connecting buyers and sellers worldwide. It offers a secure, efficient platform for trading chemicals, featuring advanced search tools, real-time communication, and transparent transactions, simplifying procurement and sales in a highly regulated market.',
+    imgUrl: 'https://res.cloudinary.com/joaojesus/image/upload/v1737164906/chemondis.png',
+    imgAlt: 'CheMondis website',
+    name: 'CheMondis',
+    stack: ['React', 'Redux', 'JavaScript', 'Styled Components'],
+  },
+  {
+    link: 'https://tamanna.com',
+    description:
+      'Tamanna.com is a Kuwait-based online shopping platform offering over 300 global fashion, beauty, and lifestyle brands. Launched in 2021, it provides free next-day delivery, click-and-collect at Avenues Mall, and easy returns, delivering a seamless shopping experience tailored to modern consumers needs.',
+    imgUrl: 'https://res.cloudinary.com/joaojesus/image/upload/v1737166216/tamanna.png',
+    imgAlt: 'Tamanna website',
+    name: 'Tamanna',
+    stack: ['React', 'TypeScript', 'TailwindCss'],
   },
 ]
 
 export function Projects() {
   return (
-    <section id='projects' className='md:text-center'>
-      <Heading highlight='Projects' text="I've worked on" />
+    <section id='projects' className='md:text-center scroll-m-8'>
+      <Heading highlight='Projects' text='I have worked on' />
       <div className='flex flex-col gap-20 mt-16'>
-        {projectsData.map(({ name, description, imgUrl, stack, github, link }, index) => {
+        {projectsData.map(({ name, description, imgUrl, imgAlt, stack, github, link }, index) => {
           const isOdd = !!(index % 2)
           return (
             <div
@@ -31,24 +60,21 @@ export function Projects() {
               className={cx('flex flex-col gap-6', isOdd ? 'md:flex-row-reverse' : 'md:flex-row')}
             >
               <Image
-                className='rounded-lg self-center max-w-md max-h-[252px] w-full h-full object-cover border border-[#d067ff2b]'
+                className='rounded-lg self-center max-w-md h-[250px] w-full object-cover border border-[#d067ff2b]'
                 src={imgUrl}
                 width={400}
                 height={250}
-                alt='random cat'
+                alt={imgAlt}
               />
-              <div className='flex flex-col md:justify-between gap-6 text-start w-full relative'>
+              <div className='flex flex-col md:justify-between gap-4 text-start w-full relative'>
                 <div className='flex justify-between'>
-                  <div className='flex flex-col font-heading'>
-                    <span className='font-medium gradient-heading dark:gradient-heading-dark'>
-                      Project name
-                    </span>
-                    <h3 className='text-xl font-semibold'>{name}</h3>
-                  </div>
+                  <h3 className='font-heading text-xl font-semibold'>{name}</h3>
                   <div className='flex gap-4'>
-                    <Link href={github} target='_blank' rel='noopener noreferrer'>
-                      <FiGithub size={24} />
-                    </Link>
+                    {github && (
+                      <Link href={github} target='_blank' rel='noopener noreferrer'>
+                        <FiGithub size={24} />
+                      </Link>
+                    )}
                     <Link href={link} target='_blank' rel='noopener noreferrer'>
                       <FiExternalLink size={24} />
                     </Link>
