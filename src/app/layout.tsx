@@ -1,11 +1,11 @@
 import '@/styles/globals.css'
 
-import { cookies } from 'next/headers'
-import { cx } from 'class-variance-authority'
-import { Poppins, DM_Sans } from 'next/font/google'
-import type { Metadata } from 'next'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
+import { cx } from 'class-variance-authority'
+import type { Metadata } from 'next'
+import { DM_Sans, Poppins } from 'next/font/google'
+import { cookies } from 'next/headers'
 
 import { Header } from '@/components/Header'
 import { Maintenance } from '@/components/Maintenance'
@@ -33,7 +33,7 @@ const dmSans = DM_Sans({
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const cookieStore = await cookies()
-  const themeFromCookies = cookieStore.get('theme')?.value as IThemeContext['theme']
+  const themeFromCookies = (cookieStore.get('theme')?.value as IThemeContext['theme']) || 'dark'
   const isMaintenanceMode = process.env.MAINTENANCE_MODE === '1'
 
   return (
