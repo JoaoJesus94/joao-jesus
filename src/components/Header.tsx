@@ -6,11 +6,11 @@ export function Header() {
     <header className='pb-10 flex justify-end sm:justify-between items-center'>
       <nav className='hidden sm:flex gap-14'>
         <Link href='/#'>Home</Link>
-        <Link href='/#'>Skills</Link>
-        <Link href='/#'>Projects</Link>
-        <Link href='/#'>Contact</Link>
+        <Link href='/#about-me'>About me</Link>
+        <Link href='/#skills'>Skills</Link>
+        <Link href='/#projects'>Projects</Link>
+        {/* <Link href='/#contact'>Contact</Link> */}
       </nav>
-
       <ThemeToggle />
     </header>
   )

@@ -1,28 +1,47 @@
 import Image from 'next/image'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 import { CopyText } from '@/components/ui/CopyText'
+import { Link } from '@/components/ui/Link'
 import { Tile } from '@/components/ui/Tile'
 import laptopIcon from '@/public/laptopIcon.svg'
 import portugalFlagIcon from '@/public/portugalFlag.svg'
 import reactIcon from '@/public/react.svg'
-import { Link } from '@/components/ui/Link'
 
 export function Intro() {
   return (
     <section className='flex flex-col md:flex-row items-center gap-10 lg:gap-16'>
       <div className='flex flex-col flex-1 gap-6'>
         <div>
-          <span className='font-body text-2xl'>Hello! I&apos;m João Jesus</span>
+          <span className='font-body text-2xl'>Hi there! I&apos;m João Jesus</span>
           <h1 className='font-heading text-4xl leading-tight font-semibold gradient-heading dark:gradient-heading-dark'>
             Frontend Engineer
           </h1>
         </div>
         <CopyText>
-          While frontend development is my primary interest, I&apos;m also keen to explore the
-          backend using Node.js. As a JavaScript enthusiast, I&apos;m always on the lookout for new
-          opportunities to refine and expand my skill set.
+          I am a Frontend Engineer with over 5 years of experience in crafting web applications
+          using React and TypeScript. I specialize in performance optimization and creating
+          responsive user interfaces. Committed to writing clean, maintainable code, I strive to
+          deliver seamless user experiences. As an effective communicator, I excel in
+          cross-functional teams and am dedicated to continuous growth and learning.
         </CopyText>
+        <div className='flex gap-4'>
+          <Link href='https://github.com/JoaoJesus94' target='_blank' rel='noopener noreferrer'>
+            <FaGithub size={32} />
+          </Link>
+          <Link
+            href='https://www.linkedin.com/in/joaojesus94'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FaLinkedin size={32} />
+          </Link>
+        </div>
+        {/* <Link href='#' variant='button'>
+          Contact me
+        </Link> */}
       </div>
+
       <div className='flex-1 relative min-w-[270px] sm:min-w-[340px] max-w-[420px]'>
         <Image
           className='animate-slow-bounce'
