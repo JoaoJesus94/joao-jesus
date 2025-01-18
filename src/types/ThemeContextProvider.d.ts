@@ -1,9 +1,11 @@
+type Theme = 'light' | 'dark'
+
 interface IThemeContext {
-  theme?: 'light' | 'dark'
+  theme?: Theme
   toggleTheme?: () => void
 }
 
 interface ThemeContextProviderProps {
-  themeFromCookies?: IThemeContext['theme']
+  themeFromCookies: Theme
   children: ReactNode
 }
