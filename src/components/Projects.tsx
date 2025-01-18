@@ -50,7 +50,7 @@ const projectsData: Project[] = [
 export function Projects() {
   return (
     <section id='projects' className='md:text-center scroll-m-8'>
-      <Heading highlight='Projects' text='I have worked on' />
+      <Heading highlight='Projects' text="I've worked on" />
       <div className='flex flex-col gap-20 mt-16'>
         {projectsData.map(({ name, description, imgUrl, imgAlt, stack, github, link }, index) => {
           const isOdd = !!(index % 2)
